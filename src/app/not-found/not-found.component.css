@@ -1,0 +1,8 @@
+.not-found-countainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.not-found-image{
+  width: 60%;
+}
