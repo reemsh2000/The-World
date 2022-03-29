@@ -3,6 +3,13 @@
     <a routerLink="/"> Where in the World ? </a>
   </h3>
   <div class="nav-left">
-
+   
+    <span class="dark-mode-comp">
+      <p>Dark Mode</p>
+      <p-inputSwitch
+        (ngModel)="(checked)"
+        (change)="setDarkMode($event)"
+      ></p-inputSwitch>
+    </span>
   </div>
 </nav>
