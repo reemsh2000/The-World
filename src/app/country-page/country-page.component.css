@@ -1,6 +1,6 @@
 .map-link{
   text-decoration: none;
-  color: #353333;
+  color: var(--text);
   font-weight: bold !important;
   padding: 10px;
   background-color:  rgba(255, 166, 0, 0.548);
@@ -13,7 +13,7 @@
   justify-content: space-between;
   align-items: center;
   height: 58vh;
-  color: #353333;
+  color: var(--text);
   margin-bottom: 100px;
 }
 .flag{
@@ -32,9 +32,8 @@
   flex-direction: column;
   padding: 30px;
   justify-content: space-evenly;
-  box-shadow: 1px 1px 2px #353333;
-    height: 98%;
-
+  box-shadow: var(--shadow);
+   height: 98%;
 }
 .info-title{
   font-weight: bold;

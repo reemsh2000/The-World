@@ -7,8 +7,8 @@
     <span class="dark-mode-comp">
       <p>Dark Mode</p>
       <p-inputSwitch
-        (ngModel)="(checked)"
-        (onChange	)="setDarkMode($event)"
+        (ngModel)="(inDarkMode)"
+        (onChange)="setDarkMode($event.checked)"
       ></p-inputSwitch>
     </span>
   </div>
