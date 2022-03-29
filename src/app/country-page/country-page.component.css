@@ -18,7 +18,9 @@
 }
 .flag{
    width:43%;
-   padding: 30px;
+   /* padding: 30px; */
+   box-shadow: var(--shadow);
+   border-radius: 15px;
 }
 
 .flag-imag{
