@@ -1,0 +1,11 @@
+<a href="/country/{{country.name.common}}">
+<p-card>
+  <ng-template pTemplate="header">
+    <img alt="Card" [src]="country.flags.png" class="card-image"/>
+  </ng-template>
+  <ng-template pTemplate="body" styleClass="country-title">
+    {{country.name.common}}
+  </ng-template>
+  <ng-template pTemplate="footer"> Capital : {{country.capital}} </ng-template>
+</p-card>
+</a>
