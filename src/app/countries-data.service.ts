@@ -6,16 +6,19 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class CountriesDataService {
-  url="https://restcountries.com"
+  url="https://restcountries.com/v3.1"
   constructor(private http: HttpClient) {}
 
   getAllCountries() {
-    return this.http.get(`${this.url}/v3.1/all`)
+    return this.http.get(`${this.url}/all`)
   }
   getCountryInfo(country: string) {
-    return this.http.get(`${this.url}/v3.1/name/${country}`)
+    return this.http.get(`${this.url}/name/${country}`)
   }
   getRegionCountries(region: string) {
-    return this.http.get(`${this.url}/v3.1/region/${region}`)
+    return this.http.get(`${this.url}/region/${region}`)
+  }
+  getCounriesByAlpha(country:string){
+    return this.http.get(`${this.url}/alpha/${country}`)
   }
 }
