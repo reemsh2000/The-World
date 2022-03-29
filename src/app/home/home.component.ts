@@ -11,11 +11,11 @@ export class HomeComponent implements OnInit {
   loading = true
   selectedRegion: any
   regions = [
-    { name: 'Europe' },
-    { name: 'Americas' },
-    { name: 'Oceania' },
-    { name: 'Africa' },
     { name: 'Asia' },
+    { name: 'Africa' },
+    { name: 'Americas' },
+    { name: 'Europe' },
+    { name: 'Oceania' },
   ]
 
   constructor(private countryService: CountriesDataService) {}
