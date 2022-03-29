@@ -21,7 +21,6 @@ export class HomeComponent implements OnInit {
   constructor(private countryService: CountriesDataService) {}
   ngOnInit() {
     this.getCountriesInfo()
-    console.log(this.selectedRegion)
   }
   getCountriesInfo() {
     this.countryService.getAllCountries().subscribe((data) => {

@@ -25,7 +25,6 @@ export class CountryPageComponent implements OnInit {
           this.country = data[0]
           this.loading=false;
           this.borderCountries = this.country.borders
-          console.log(this.country)
         })
     })
   }
