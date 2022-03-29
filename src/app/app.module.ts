@@ -7,6 +7,8 @@ import {InputSwitchModule} from 'primeng/inputswitch';
 import {DropdownModule} from 'primeng/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import {CarouselModule} from 'primeng/carousel';
+import { ButtonModule } from 'primeng/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +17,7 @@ import { CountryPageComponent } from './country-page/country-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CardComponent } from './components/card/card.component';
+import { SliderComponent } from './components/slider/slider.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,8 @@ import { CardComponent } from './components/card/card.component';
     CountryPageComponent,
     NotFoundComponent,
     NavbarComponent,
-    CardComponent
+    CardComponent,
+    SliderComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +38,8 @@ import { CardComponent } from './components/card/card.component';
     DropdownModule,
     BrowserAnimationsModule,
     ProgressSpinnerModule,
+    CarouselModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

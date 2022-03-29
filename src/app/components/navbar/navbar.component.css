@@ -33,14 +33,18 @@
 }
 
 
-@media (max-width:900px) {
+@media (max-width:700px) {
 
+  .nav-title a{
+    font-size: 12.5px;
+    margin: 2px;
+  }
   .nav-left {
     font-size: 1rem;
     width: 55%;
   }
   .dark-mode-comp{
-    width:55%;
-    font-size: 17px;
+    width:85%;
+    font-size: 15px;
   }
 }
