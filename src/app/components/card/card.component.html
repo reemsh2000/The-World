@@ -1,11 +1,17 @@
-<a href="/country/{{country.name.common}}">
-<p-card>
-  <ng-template pTemplate="header">
-    <img alt="Card" [src]="country.flags.png" class="card-image"/>
-  </ng-template>
-  <ng-template pTemplate="body" styleClass="country-title">
-    {{country.name.common}}
-  </ng-template>
-  <ng-template pTemplate="footer"> Capital : {{country.capital}} </ng-template>
-</p-card>
+<a href="/country/{{ country.name.common }}">
+  <p-card>
+    <ng-template pTemplate="header">
+      <img alt="Card" [src]="country.flags.png" class="card-image" />
+    </ng-template>
+    <ng-template pTemplate="body" styleClass="country-title">
+      <h2>{{ country.name.common }}</h2>
+    </ng-template>
+    <ng-template pTemplate="footer">
+      <p class="country-info">Capital : {{ country.capital }}</p>
+      <p class="country-info">
+        Population : {{ country.population | number: "1.2-2" }}
+      </p>
+      <p class="country-info">Region : {{ country.region }}</p>
+    </ng-template>
+  </p-card>
 </a>

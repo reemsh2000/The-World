@@ -10,13 +10,25 @@
   </div>
   <div class="information">
     <h2>{{ country.name.common }}</h2>
-    <p> <span class="info-title"> Official Name : </span>{{ country.name.official }}</p>
-    <p> <span class="info-title"> Capital : </span>{{ country.capital }}</p>
-    <p> <span class="info-title"> Region : </span>{{ country.region }}</p>
-    <p> <span class="info-title"> Population : </span>{{country.population  | number : '1.2-2'}}</p>
-    <p> <span class="info-title"> Start of week  : </span>{{ country.startOfWeek }}</p>
-    <p> <span class="info-title"> timezones : </span>{{ country.timezones[0] }}</p>
-    <a [href]="country.maps.googleMaps" class="map-link"> Where is {{country.name.common }} on the map ?</a>
+    <p>
+      <span class="info-title"> Official Name : </span
+      >{{ country.name.official }}
+    </p>
+    <p><span class="info-title"> Capital : </span>{{ country.capital }}</p>
+    <p><span class="info-title"> Region : </span>{{ country.region }}</p>
+    <p>
+      <span class="info-title"> Population : </span
+      >{{ country.population | number: "1.2-2" }}
+    </p>
+    <p>
+      <span class="info-title"> Start of week : </span>{{ country.startOfWeek }}
+    </p>
+    <p>
+      <span class="info-title"> timezones : </span>{{ country.timezones[0] }}
+    </p>
+    <a [href]="country.maps.googleMaps" target="_blank" class="map-link">
+      Where is {{ country.name.common }} on the map ?</a
+    >
   </div>
 </div>
 <!--  Borders country  -->
