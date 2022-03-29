@@ -1,1 +1,32 @@
-<p>home works!</p>
+<!--countries Filter    -->
+<div class="search-filter-comp">
+  <span class="p-input-icon-left" [style]="{ marginLeft: '25px' }"
+  >
+    <i class="pi pi-search"></i>
+    <input
+      type="text"
+      pInputText
+      placeholder="Search"
+      #searchedCountry
+      (change)="searchAboutCountry(searchedCountry.value)"
+    />
+  </span>
+  <p-dropdown [options]="regions" (ngModel)="selectedRegion" optionLabel="name"
+   optionValue="name" placeholder="Filter By Region"
+   (onChange)="filterByRegion($event.value)"
+  ></p-dropdown>
+
+</div>
+<!--  Loading -->
+<p-progressSpinner
+  *ngIf="loading"
+  [style]="{ display: 'flex', justifyContent: 'center' }"
+></p-progressSpinner>
+<!--  Cards  -->
+<div class="cards-container">
+  <app-card
+    *ngFor="let country of countries"
+    [style]="{ width: '23%', padding: '10px' }"
+    [country]="country"
+  ></app-card>
+</div>

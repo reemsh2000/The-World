@@ -1,0 +1,14 @@
+.cards-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.country-title{
+  font-size: 25px;
+}
+.search-filter-comp{
+  display: flex;
+  justify-content: space-between;
+  padding:15px;
+  width:97%;
+}
