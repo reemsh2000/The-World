@@ -1,31 +1,29 @@
 <p-carousel
-  *ngIf="borderCountriesInfo.length>0"
+  *ngIf="borderCountriesInfo.length > 0"
   [value]="borderCountriesInfo"
   [numVisible]="3"
   [numScroll]="3"
   [circular]="false"
 >
-  <ng-template pTemplate="header">
-  </ng-template>
   <ng-template let-country pTemplate="item">
     <div class="country-item">
-      <div class="country-item-content">
-        <div class="mb-3">
-          <img
-            [src]="country.flags.png"
-            [alt]="country.name.common"
-            class="country-image"
-          />
-        </div>
-        <div>
-          <h4 class="mb-1">{{ country?.name.common }}</h4>
-          <h5 class="mt-0 mb-3">{{ country?.capital }}</h5>
+        <div class="country-item-content">
+          <div class="mb-3">
+            <img
+              [src]="country.flags.png"
+              [alt]="country.name.common"
+              class="country-image"
+            />
+          </div>
+          <div>
+            <h4 class="mb-1">{{ country?.name.common }}</h4>
+            <h5 class="mt-0 mb-3">{{ country?.capital }}</h5>
 
-          <a [href]="country.maps.googleMaps"
-            >{{ country?.name.common }} On Map
-          </a>
+            <a [href]="country.maps.googleMaps"
+              >{{ country?.name.common }} On Map
+            </a>
+          </div>
         </div>
-      </div>
     </div>
   </ng-template>
 </p-carousel>
