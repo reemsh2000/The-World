@@ -29,7 +29,7 @@ The user will enter the site and will see all world countries and can search abo
 -----------
 ## How to Launch App Locally
  * clone this repo by typing this command in the terminal:
- ```https://github.com/reemsh2000/World.git```
+ ```https://github.com/reemsh2000/The-World.git```
 * Run `npm i` to install the packages for the app in general.
 * Run `npm start`.
 ------------------
