@@ -4,6 +4,9 @@
   [numVisible]="3"
   [numScroll]="3"
   [circular]="false"
+  [responsiveOptions]="responsiveOptions"
+  [autoplayInterval]="3000"
+  styleClass="custom-carousel"
 >
   <ng-template let-country pTemplate="item">
     <a [routerLink]="['/country', country.name.common]">

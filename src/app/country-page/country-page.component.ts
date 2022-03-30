@@ -9,22 +9,24 @@ import { CountriesDataService } from '../countries-data.service'
 export class CountryPageComponent implements OnInit {
   country: any
   borderCountries: any
-  loading=true;
-
+  loading = true
+  diplaySlider = false
   constructor(
     private route: ActivatedRoute,
     private countriesService: CountriesDataService,
   ) {}
 
   ngOnInit(): void {
+    this.diplaySlider = false
     this.route.paramMap.subscribe((params) => {
       let countryName: any = params.get('country')
       this.countriesService
         .getCountryInfo(countryName)
         .subscribe((data: any) => {
           this.country = data[0]
-          this.loading=false;
+          this.loading = false
           this.borderCountries = this.country.borders
+          this.diplaySlider = true
         })
     })
   }
