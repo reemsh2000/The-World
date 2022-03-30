@@ -6,7 +6,8 @@
   [circular]="false"
 >
   <ng-template let-country pTemplate="item">
-    <div class="country-item">
+    <a [routerLink]="['/country', country.name.common]">
+      <div class="country-item">
         <div class="country-item-content">
           <div class="mb-3">
             <img
@@ -24,6 +25,7 @@
             </a>
           </div>
         </div>
-    </div>
+      </div>
+    </a>
   </ng-template>
 </p-carousel>
