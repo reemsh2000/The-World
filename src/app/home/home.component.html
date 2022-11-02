@@ -22,16 +22,18 @@
   ></p-dropdown>
 </div>
 <!--  Loading -->
-<p-progressSpinner
-  *ngIf="loading"
+<p-progressSpinner *ngIf="loading"
   [style]="{ display: 'flex', justifyContent: 'center' }"
 ></p-progressSpinner>
 <!--  Cards  -->
-<div class="cards-container">
+<div class="cards-container" *ngIf="countries.length">
   <app-card
     class="app-card"
     *ngFor="let country of countries"
     [style]="{ width: '20%', margin: '25px', borderRadius: '20px' }"
     [country]="country"
   ></app-card>
+</div>
+<div class="cards-container" *ngIf="!countries.length && !loading">
+  <p>There is no data</p>
 </div>

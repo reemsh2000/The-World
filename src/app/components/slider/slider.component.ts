@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core'
-import { CountriesDataService } from 'src/app/countries-data.service'
+import { Component, Input, OnInit } from '@angular/core';
+import { CountriesDataService } from 'src/app/countries-data.service';
 
 @Component({
   selector: 'app-slider',
@@ -7,9 +7,9 @@ import { CountriesDataService } from 'src/app/countries-data.service'
   styleUrls: ['./slider.component.css'],
 })
 export class SliderComponent implements OnInit {
-  @Input() borderCountries: any = []
-  borderCountriesInfo: any = []
-  responsiveOptions
+  @Input() borderCountries: any = [];
+  borderCountriesInfo: any = [];
+  responsiveOptions;
 
   constructor(private countriesService: CountriesDataService) {
     this.responsiveOptions = [
@@ -28,7 +28,7 @@ export class SliderComponent implements OnInit {
         numVisible: 1,
         numScroll: 1,
       },
-    ]
+    ];
   }
 
   ngOnInit(): void {
@@ -36,8 +36,10 @@ export class SliderComponent implements OnInit {
       this.countriesService
         .getCounriesByAlpha(country)
         .subscribe((data: any) => {
-          this.borderCountriesInfo.push(data[0])
-        })
-    })
+          if (data[0].name.common !== 'Israel') {
+            this.borderCountriesInfo.push(data[0]);
+          }
+        });
+    });
   }
 }
