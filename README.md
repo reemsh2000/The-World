@@ -2,7 +2,7 @@
 
 ## Firebase deployment [link](https://world-8fde8.web.app/)
 
-## Netlify Deployment demo :tv:  [link](https://6244ae6f973eab0008c3e3ca--magenta-longma-b88b8c.netlify.app/)
+## Netlify Deployment demo :tv:  [link](https://magenta-longma-b88b8c.netlify.app/)
 
 ## Solution :bulb:
 
